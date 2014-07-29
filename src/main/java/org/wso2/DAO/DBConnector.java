@@ -14,8 +14,8 @@ public class DBConnector {
     public static Connection getConnection(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String queryStr="jdbc:mysql://localhost:3306/article_projectwso2";//jdbc:db type://address/name
-            con=DriverManager.getConnection(queryStr,"root","");
+            String queryStr="jdbc:mysql://mysql-dev-01.cloud.wso2.com:3306/article_projectwso2";
+            con=DriverManager.getConnection(queryStr,"article_7BjICuwY","dbuser");
         } catch (Exception ex) {
             Logger.getLogger(DBConnector.class.getName()).log(Level.SEVERE, null, ex);
         }
